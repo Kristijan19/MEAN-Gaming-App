@@ -1,0 +1,69 @@
+<div class="container h-100">
+
+    <!-- Material tabs -->
+    <mat-tab-group>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="example-tab-icon">login</mat-icon>
+                <span class="mx-2">Login</span>                
+            </ng-template>
+            <form [formGroup]="signInForm" >
+                <div class="example-container">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter your email</mat-label>
+                        <input matInput placeholder="pat@example.com" formControlName="email" required />
+                        <mat-error >Must be a valid email </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="example-container">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter your password</mat-label>
+                        <input matInput type="password" placeholder="pat@example.com" formControlName="password" required />
+                        <mat-error >lenggth 4 to 20 character and alphanumeric </mat-error>
+                    </mat-form-field>
+                </div>
+                <h5 class="text-center" *ngIf="signInMessage">{{signInMessage}}</h5>
+                <span class="spinner-border" *ngIf="!signInMessage"></span>
+                <div class="form-element">
+                    <button mat-raised-button type="button" [disabled]="signInForm.invalid" (click)="signInForm.valid && signIn()">SignIn</button>
+                </div>
+            </form>
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="example-tab-icon">perm_contact_calendar</mat-icon>
+                <span class="mx-2">SignUp</span>
+            </ng-template>
+            <form [formGroup]="signUpForm" >
+                <div class="example-container">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter your name</mat-label>
+                        <input matInput placeholder="pat@example.com" formControlName="name"  required />
+                        <mat-error>Name Must be 4 Character long</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="example-container">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter your email</mat-label>
+                        <input matInput placeholder="pat@example.com" formControlName="email" required />
+                        <mat-error >Must be a valid email </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="example-container">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter your password</mat-label>
+                        <input matInput type="password" placeholder="pat@example.com" formControlName="password" required />
+                        <mat-error >lenggth 4 to 20 character and alphanumeric </mat-error>
+                    </mat-form-field>
+                </div>
+                <h5 class="text-center" *ngIf="signUpMessage">{{signUpMessage}}</h5>
+                <span class="spinner-border" *ngIf="!signUpMessage"></span>
+                <div class="form-element">
+                    <button mat-raised-button type="button" (click)="signUpForm.valid && signUp()" [disabled]="signUpForm.invalid">SignUp</button>
+                </div>
+            </form>
+        </mat-tab>
+
+    </mat-tab-group>
+</div>
