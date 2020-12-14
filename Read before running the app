@@ -1,2 +1,2 @@
 Run npm install in both folders(storeApp, express) to install dependencies.
-Check .env to setup connection to MongoDB
+Check .env to setup environment variables
