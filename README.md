@@ -1,29 +1,15 @@
-# README #
+# MEAN APP
+Shop app using MongoDB, Express, Angular and Nodejs.
 
-This README would normally document whatever steps are necessary to get your application up and running.
+#### To Run this project Clone it and install modules in both folders using
+```
+npm install
+```
 
-### What is this repository for? ###
+Then Create .env file and create PORT and MONGO_URI Variable and specify Value.
+That's it. You are ready to go. To execute this project just type
+```
+ng serve in storeApp folder and nodemon server.js in express folder
+```
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+Enjoy...!
