@@ -9,7 +9,9 @@ npm install
 Then Create .env file and create PORT and MONGO_URI Variable and specify Value.
 That's it. You are ready to go. To execute this project just type
 ```
-ng serve in storeApp folder and nodemon server.js in express folder
+ng serve in storeApp folder
+and 
+nodemon server.js in express folder
 ```
 
 Enjoy...!
